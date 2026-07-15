@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistani Politician Classifier | AI Analysis</title>
+    <meta name="description" content="AI powered image classification of Pakistani politicians using Convolutional Neural Networks.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-gradients">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1 class="title">Politician<span class="highlight">AI</span></h1>
+            <p class="subtitle">Upload a photo to identify a Pakistani politician using our CNN model.</p>
+        </header>
+
+        <div class="upload-section" id="drop-zone">
+            <input type="file" id="file-input" accept="image/*" hidden>
+            <div class="upload-content">
+                <div class="icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="upload-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                </div>
+                <h3>Drag & Drop your image here</h3>
+                <p>or</p>
+                <button class="btn-primary" id="browse-btn">Browse Files</button>
+            </div>
+            <div class="preview-container hidden" id="preview-container">
+                <img id="image-preview" src="" alt="Preview">
+                <button class="btn-icon remove-btn" id="remove-btn" title="Remove Image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <button class="btn-submit hidden" id="classify-btn">
+                <span>Classify Image</span>
+                <div class="spinner hidden" id="loading-spinner"></div>
+            </button>
+        </div>
+
+        <div class="result-section hidden" id="result-section">
+            <h2 class="result-title">Analysis Result</h2>
+            <div class="result-card">
+                <div class="result-item">
+                    <span class="label">Matched Politician:</span>
+                    <span class="value" id="predicted-name">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Confidence Score:</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="confidence-bar"></div>
+                    </div>
+                    <span class="value confidence-value" id="confidence-value">0%</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

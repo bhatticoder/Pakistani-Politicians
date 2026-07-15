@@ -1,0 +1,19 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+.env/
+
+# Python overrides
+__pycache__/
+*.pyc
+
+# Dataset ignoring
+*.jpg
+*.jpeg
+*.png
+model.h5
+model.keras
+
+# Vercel
+.vercel/
