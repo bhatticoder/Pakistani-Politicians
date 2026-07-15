@@ -117,6 +117,59 @@ header {
     line-height: 1.5;
 }
 
+/* Information Banner */
+.info-banner {
+    background: rgba(20, 25, 22, 0.6);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-left: 4px solid var(--accent);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    animation: fadeDown 0.8s ease-out 0.2s both;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.info-banner:hover {
+    border-color: rgba(16, 185, 129, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+}
+
+.info-banner-icon {
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.info-banner-content {
+    text-align: left;
+}
+
+.info-banner-content h4 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-primary);
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.info-banner-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.info-banner-content strong {
+    color: #fff;
+    font-weight: 500;
+}
+
 /* Glassmorphism Card */
 .upload-section {
     background: var(--card-bg);
